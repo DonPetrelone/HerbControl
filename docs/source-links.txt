@@ -27,3 +27,5 @@ https://colorgardening.com/how-often-water-mint-plant/ - PP
 https://homeguides.sfgate.com/care-indoor-parsley-44959.html - PP
 
 https://extension.umn.edu/vegetables/growing-chives#watering-934460 - PP
+
+http://www.raspberry-pi-geek.com/Archive/2017/21/Sending-and-receiving-an-SMS-with-the-Raspberry-Pi - PP
