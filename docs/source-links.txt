@@ -31,3 +31,5 @@ https://extension.umn.edu/vegetables/growing-chives#watering-934460 - PP
 http://www.raspberry-pi-geek.com/Archive/2017/21/Sending-and-receiving-an-SMS-with-the-Raspberry-Pi - PP
 
 https://thepihut.com/blogs/raspberry-pi-tutorials/27968772-turning-on-an-led-with-your-raspberry-pis-gpio-pins - PP
+
+https://www.allaboutcircuits.com/projects/transmit-temperature-with-raspberry-pi/ - PP
