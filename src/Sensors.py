@@ -2,19 +2,16 @@
 #Western Michigan University
 #Authors: Vinicius Petrelli Cicerone, Dylan Lafleur, Paxton Plum
 #Faculty Advisor: Dr. John Kapenga
-#This is the main file of the program
+#This files takes measurements from the sensors and stores them in DB;
+#It also sends out text messages in case of any out of range measurements
 
 import AirTempHum
 import TextMessage
-import VoltageControl
-import sys
 
 temp = 0
 hum = 0
 airSensor = 22
 airPort = 4
-lightPin = 7
-voltage = int(sys.argv[1])
 
 '''
 temp, hum = AirTempHum.airTempHum(airSensor, airPort)
@@ -25,5 +22,3 @@ if hum is not None and temp is not None:
 else:
     print('Failed to get reading. Try again!')
 '''
-
-VoltageControl.pinVoltage(lightPin, 1, voltage)
