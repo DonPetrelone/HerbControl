@@ -7,14 +7,16 @@
 import AirTempHum
 import TextMessage
 import VoltageControl
+import sys
 
 temp = 0
 hum = 0
 airSensor = 22
 airPort = 4
 lightPin = 7
+voltage = int(sys.argv[1])
 
-
+'''
 temp, hum = AirTempHum.airTempHum(airSensor, airPort)
 
 if hum is not None and temp is not None:
@@ -22,5 +24,6 @@ if hum is not None and temp is not None:
     print('Temp={0:0.1f}*  Humidity={1:0.1f}%'.format(temp, hum))
 else:
     print('Failed to get reading. Try again!')
+'''
 
-#VoltageControl.pinVoltage(lightPin, 1, 0)
+VoltageControl.pinVoltage(lightPin, 1, voltage)
