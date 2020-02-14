@@ -7,6 +7,9 @@ delay = 0.2
 spi = spidev.SpiDev()
 spi.open(0,0)
 
+#Problems with signal conversion
+    #Need to convert the HIGH/LOW outputs into values that can be analysed
+
 '''
 def readChannel(channel):
 	val = spi.xfer2([1,(8+channel)<<4,0])

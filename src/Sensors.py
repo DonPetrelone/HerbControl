@@ -13,6 +13,14 @@ hum = 0
 airSensor = 22
 airPort = 4
 
+#1 - call method to take air temp and humidity
+    #If any values are out of range send client a text
+    #call method to insert value in DB
+
+#2 - call method to take soil moisture
+    # If any values are out of range send client a text
+    # call method to insert value in DB
+
 '''
 temp, hum = AirTempHum.airTempHum(airSensor, airPort)
 
