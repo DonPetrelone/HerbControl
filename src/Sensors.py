@@ -17,7 +17,7 @@ airPort = 4
 temp, hum = AirTempHum.airTempHum(airSensor, airPort)
 
 if hum is not None and temp is not None:
-    TextMessage.text("Fuck")    
+    TextMessage.text("Hello")    
     print('Temp={0:0.1f}*  Humidity={1:0.1f}%'.format(temp, hum))
 else:
     print('Failed to get reading. Try again!')
