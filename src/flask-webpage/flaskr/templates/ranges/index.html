@@ -1,0 +1,131 @@
+{% extends 'base.html' %} 
+  <!-- Page Content -->
+	{% block header %}
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12 text-center">
+				<h1>{% block title %}Set Ranges{% endblock %}</h1>
+				</div>
+			</div>
+		</div>
+		<div class="container">
+			<div class="row" style="margin-top: 15px; margin-bottom: 15px">
+				<div class="col-md-4 text-center">
+					<h4>Air Temperature</h4>
+				</div>
+				<div class="col-md-4 text-center">
+					<h4>Air Humidity</h4>
+				</div>
+				<div class="col-md-4 text-center">
+					<h4>Soil Moisture</h4>
+				</div>
+			</div>
+  			<div class="row" style="margin-bottom: 15px">
+    			<div class="col-md-4 text-center">
+      				<div class="container rounded bg-danger text-white">
+      					<h5>High Danger Zone</h5>80F<input type="range" name="highDangerTemp"
+         				min="80" max="100" onchange="updateTextInput(this.value);">100F
+      				</div>
+    			</div>
+    			<div class="col-md-4 text-center">
+					<div class="container rounded bg-danger text-white">	
+      					<h5>High Danger Zone</h5>80%<input type="range" name="highDangerHum"
+         				min="80" max="100" onchange="updateTextInput(this.value);">100%
+    				</div>
+    			</div>	
+    			<div class="col-md-4 text-center">
+    				<div class="container rounded bg-danger text-white">
+						<h5>High Danger Zone</h5>80%<input type="range" name="highDangerMoist"
+		         		min="80" max="100" onchange="updateTextInput(this.value);">100%
+		    			</div>
+		    	</div>
+			</div>
+			<div class="row" style="margin-bottom: 15px">
+    			<div class="col-md-4 text-center">
+      				<div class="container rounded bg-warning text-white">
+      					<h5>High Warning Zone</h5>60F<input type="range" name="highWarnTemp"
+         				min="60" max="79" onchange="updateTextInput(this.value);">79F
+      				</div>
+    			</div>
+    			<div class="col-md-4 text-center">
+					<div class="container rounded bg-warning text-white">	
+      					<h5>High Warning Zone</h5>60%<input type="range" name="highWarnHum"
+         				min="60" max="79" onchange="updateTextInput(this.value);">79%
+    				</div>
+    			</div>	
+    			<div class="col-md-4 text-center">
+    				<div class="container rounded bg-warning text-white">
+						<h5>High Warning Zone</h5>60%<input type="range" name="highWarnMoist"
+		         		min="60" max="79" onchange="updateTextInput(this.value);">79%
+		    			</div>
+		    	</div>
+			</div>
+			<div class="row" style="margin-bottom: 15px">
+    			<div class="col-md-4 text-center">
+      				<div class="container rounded bg-success text-white">
+      					<h5>Good Zone</h5>40F<input type="range" name="goodTemp"
+         				min="40" max="59" onchange="updateTextInput(this.value);">59F
+      				</div>
+    			</div>
+    			<div class="col-md-4 text-center">
+					<div class="container rounded bg-success text-white">	
+      					<h5>Good Zone</h5>40%<input type="range" name="goodHum"
+         				min="40" max="59" onchange="updateTextInput(this.value);">59%
+    				</div>
+    			</div>	
+    			<div class="col-md-4 text-center">
+    				<div class="container rounded bg-success text-white">
+						<h5>Good Zone</h5>40%<input type="range" name="goodMoist"
+		         		min="40" max="49" onchange="updateTextInput(this.value);">59%
+		    			</div>
+		    	</div>
+			</div>
+			<div class="row" style="margin-bottom: 15px">
+    			<div class="col-md-4 text-center">
+      				<div class="container rounded bg-warning text-white">
+      					<h5>Low Warning Zone</h5>20F<input type="range" name="lowWarnTemp"
+         				min="20" max="49" onchange="updateTextInput(this.value);">49F
+      				</div>
+    			</div>
+    			<div class="col-md-4 text-center">
+					<div class="container rounded bg-warning text-white">	
+      					<h5>Low Warning Zone</h5>20%<input type="range" name="lowWarnHum"
+         				min="20" max="49" onchange="updateTextInput(this.value);">49%
+    				</div>
+    			</div>	
+    			<div class="col-md-4 text-center">
+    				<div class="container rounded bg-warning text-white">
+						<h5>Low Warning Zone</h5>20%<input type="range" name="lowWarnMoist"
+		         		min="20" max="49" onchange="updateTextInput(this.value);">49%
+		    		</div>
+		    	</div>
+			</div>
+			<div class="row" style="margin-bottom: 15px">
+    			<div class="col-md-4 text-center">
+      				<div class="container rounded bg-danger text-white">
+      					<h5>Low Danger Zone</h5>0F<input type="range" name="highDangerTemp"
+         				min="0" max="19" onchange="updateTextInput(this.value);">19F
+      				</div>
+    			</div>
+    			<div class="col-md-4 text-center">
+					<div class="container rounded bg-danger text-white">	
+      					<h5>Low Danger Zone</h5>0%<input type="range" name="highDangerHum"
+         				min="0" max="19" onchange="updateTextInput(this.value);">19%
+    				</div>
+    			</div>	
+    			<div class="col-md-4 text-center">
+    				<div class="container rounded bg-danger text-white">
+						<h5>Low Danger Zone</h5>0%<input type="range" name="highDangerMoist"
+		         		min="0" max="19" onchange="updateTextInput(this.value);">19%
+		    			</div>
+		    	</div>
+			</div>
+			<input style="width: 100%;border-radius: 1rem;
+    padding: 1.5%;
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+    color: #fff;
+    background-color: #0062cc;" type="submit" class="btnSubmit" value="Update" />
+		</div>
+	{% endblock %}
