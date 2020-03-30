@@ -7,11 +7,20 @@ CREATE TABLE user (
   password TEXT NOT NULL
 );
 
-CREATE TABLE post (
-  id INTEGER PRIMARY KEY AUTOINCREMENT,
-  author_id INTEGER NOT NULL,
-  created TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  title TEXT NOT NULL,
-  body TEXT NOT NULL,
-  FOREIGN KEY (author_id) REFERENCES user (id)
+CREATE TABLE ranges (
+  airTempHighDanger INTEGER NOT NULL,
+  airTempHighWarning INTEGER NOT NULL,
+  airTempGood INTEGER NOT NULL,
+  airTempLowWarning INTEGER NOT NULL,
+  airTempLowDanger INTEGER NOT NULL,
+  airHumHighDanger INTEGER NOT NULL,
+  airHumHighWarning INTEGER NOT NULL,
+  airHumGood INTEGER NOT NULL,
+  airHumLowWarning INTEGER NOT NULL,
+  airHumLowDanger INTEGER NOT NULL,
+  soilMoistHighDanger INTEGER NOT NULL,
+  soilMoistHighWarning INTEGER NOT NULL,
+  soilMoistGood INTEGER NOT NULL,
+  soilMoistLowWarning INTEGER NOT NULL,
+  soilMoistLowDanger INTEGER NOT NULL
 );

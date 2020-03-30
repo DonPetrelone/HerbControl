@@ -23,109 +23,109 @@
   			<div class="row" style="margin-bottom: 15px">
     			<div class="col-md-4 text-center">
       				<div class="container rounded bg-danger text-white">
-      					<h5>High Danger Zone</h5>80F<input type="range" name="highDangerTemp"
-         				min="80" max="100" onchange="updateTextInput(this.value);">100F
+      					<h5>High Danger Zone</h5>80F<input id="airTempHighDanger" type="range" min="80" max="100" value="{{ values['airTempHighDanger']}}" oninput="airTempHighDangerOutput.value = airTempHighDanger.value">100F
+         				<p><output id="airTempHighDangerOutput">{{ values['airTempHighDanger']}}</output>F</p>
       				</div>
     			</div>
     			<div class="col-md-4 text-center">
 					<div class="container rounded bg-danger text-white">	
-      					<h5>High Danger Zone</h5>80%<input type="range" name="highDangerHum"
-         				min="80" max="100" onchange="updateTextInput(this.value);">100%
+      					<h5>High Danger Zone</h5>80%<input id="airHumHighDanger" type="range" min="80" max="100" value="{{ values['airHumHighDanger']}}" oninput="airHumHighDangerOutput.value = airHumHighDanger.value">100%
+         				<p><output id="airHumHighDangerOutput">{{ values['airHumHighDanger']}}</output>%</p>
     				</div>
     			</div>	
     			<div class="col-md-4 text-center">
     				<div class="container rounded bg-danger text-white">
-						<h5>High Danger Zone</h5>80%<input type="range" name="highDangerMoist"
-		         		min="80" max="100" onchange="updateTextInput(this.value);">100%
-		    			</div>
+						<h5>High Danger Zone</h5>80%<input id="soilMoistHighDanger" type="range" min="80" max="100" value="{{ values['soilMoistHighDanger']}}" oninput="soilMoistHighDangerOutput.value = soilMoistHighDanger.value">100%
+		         		<p><output id="soilMoistHighDangerOutput">{{ values['soilMoistHighDanger']}}</output>%</p>
+		    		</div>
 		    	</div>
 			</div>
 			<div class="row" style="margin-bottom: 15px">
     			<div class="col-md-4 text-center">
       				<div class="container rounded bg-warning text-white">
-      					<h5>High Warning Zone</h5>60F<input type="range" name="highWarnTemp"
-         				min="60" max="79" onchange="updateTextInput(this.value);">79F
+      					<h5>High Warning Zone</h5>60F<input id="airTempHighWarning" type="range" min="60" max="79" value="{{ values['airTempHighWarning']}}" oninput="airTempHighWarningOutput.value = airTempHighWarning.value">79F
+      					<p><output id="airTempHighWarningOutput">{{ values['airTempHighWarning']}}</output>%</p>
       				</div>
     			</div>
     			<div class="col-md-4 text-center">
 					<div class="container rounded bg-warning text-white">	
-      					<h5>High Warning Zone</h5>60%<input type="range" name="highWarnHum"
-         				min="60" max="79" onchange="updateTextInput(this.value);">79%
+      					<h5>High Warning Zone</h5>60%<input id="airHumHighWarning" type="range" min="60" max="79" value="{{ values['airHumHighWarning']}}" oninput="airHumHighWarningOutput.value = airHumHighWarning.value">79%
+      					<p><output id="airHumHighWarningOutput">{{ values['airHumHighWarning']}}</output>%</p>
     				</div>
     			</div>	
     			<div class="col-md-4 text-center">
     				<div class="container rounded bg-warning text-white">
-						<h5>High Warning Zone</h5>60%<input type="range" name="highWarnMoist"
-		         		min="60" max="79" onchange="updateTextInput(this.value);">79%
-		    			</div>
+						<h5>High Warning Zone</h5>60%<input id="soilMoistHighWarning" type="range" min="60" max="79" value="{{ values['soilMoistHighWarning']}}" oninput="soilMoistHighWarningOutput.value = soilMoistHighWarning.value">79%
+						<p><output id="soilMoistHighWarningOutput">{{ values['soilMoistHighWarning']}}</output>%</p>
+		    		</div>
 		    	</div>
 			</div>
 			<div class="row" style="margin-bottom: 15px">
     			<div class="col-md-4 text-center">
       				<div class="container rounded bg-success text-white">
-      					<h5>Good Zone</h5>40F<input type="range" name="goodTemp"
-         				min="40" max="59" onchange="updateTextInput(this.value);">59F
+      					<h5>Good Zone</h5>40F<input id="airTempGood" type="range" min="40" max="59" value="{{ values['airTempGood']}}" oninput="airTempGoodOutput.value = airTempGood.value">59F
+      					<p><output id="airTempGoodOutput">{{ values['airTempGood']}}</output>%</p>
       				</div>
     			</div>
     			<div class="col-md-4 text-center">
 					<div class="container rounded bg-success text-white">	
-      					<h5>Good Zone</h5>40%<input type="range" name="goodHum"
-         				min="40" max="59" onchange="updateTextInput(this.value);">59%
+      					<h5>Good Zone</h5>40%<input id="airHumGood" type="range" min="40" max="59" value="{{ values['airHumGood']}}" oninput="airHumGoodOutput.value = airHumGood.value">59%
+      					<p><output id="airHumGoodOutput">{{ values['airHumGood']}}</output>%</p>
     				</div>
     			</div>	
     			<div class="col-md-4 text-center">
     				<div class="container rounded bg-success text-white">
-						<h5>Good Zone</h5>40%<input type="range" name="goodMoist"
-		         		min="40" max="49" onchange="updateTextInput(this.value);">59%
-		    			</div>
+						<h5>Good Zone</h5>40%<input id="soilMoistGood" type="range" min="40" max="49" value="{{ values['soilMoistGood']}}" oninput="soilMoistGoodOutput.value = soilMoistGood.value">59%
+						<p><output id="soilMoistGoodOutput">{{ values['soilMoistGood']}}</output>%</p>
+		    		</div>
 		    	</div>
 			</div>
 			<div class="row" style="margin-bottom: 15px">
     			<div class="col-md-4 text-center">
       				<div class="container rounded bg-warning text-white">
-      					<h5>Low Warning Zone</h5>20F<input type="range" name="lowWarnTemp"
-         				min="20" max="49" onchange="updateTextInput(this.value);">49F
+      					<h5>Low Warning Zone</h5>20F<input id="airTempLowWarning" type="range" min="20" max="49" value="{{ values['airTempLowWarning']}}" oninput="airTempLowWarningOutput.value = airTempLowWarning.value">49F
+      					<p><output id="airTempLowWarningOutput">{{ values['airTempLowWarning']}}</output>%</p>
       				</div>
     			</div>
     			<div class="col-md-4 text-center">
 					<div class="container rounded bg-warning text-white">	
-      					<h5>Low Warning Zone</h5>20%<input type="range" name="lowWarnHum"
-         				min="20" max="49" onchange="updateTextInput(this.value);">49%
+      					<h5>Low Warning Zone</h5>20%<input id="airHumLowWarning" type="range" min="20" max="49" value="{{ values['airHumLowWarning']}}" oninput="airHumLowWarningOutput.value = airHumLowWarning.value">49%
+      					<p><output id="airHumLowWarningOutput">{{ values['airHumLowWarning']}}</output>%</p>
     				</div>
     			</div>	
     			<div class="col-md-4 text-center">
     				<div class="container rounded bg-warning text-white">
-						<h5>Low Warning Zone</h5>20%<input type="range" name="lowWarnMoist"
-		         		min="20" max="49" onchange="updateTextInput(this.value);">49%
+						<h5>Low Warning Zone</h5>20%<input id="soilMoistLowWarning" type="range" min="20" max="49" value="{{ values['soilMoistLowWarning']}}" oninput="soilMoistLowWarningOutput.value = soilMoistLowWarning.value">49%
+						<p><output id="soilMoistLowWarningOutput">{{ values['soilMoistLowWarning']}}</output>%</p>
 		    		</div>
 		    	</div>
 			</div>
 			<div class="row" style="margin-bottom: 15px">
     			<div class="col-md-4 text-center">
       				<div class="container rounded bg-danger text-white">
-      					<h5>Low Danger Zone</h5>0F<input type="range" name="highDangerTemp"
-         				min="0" max="19" onchange="updateTextInput(this.value);">19F
+      					<h5>Low Danger Zone</h5>0F<input id="airTempLowDanger" type="range" min="0" max="19" value="{{ values['airTempLowDanger']}}" oninput="airTempLowDangerOutput.value = airTempLowDanger.value">19F
+      					<p><output id="airTempLowDangerOutput">{{ values['airTempLowDanger']}}</output>%</p>
       				</div>
     			</div>
     			<div class="col-md-4 text-center">
 					<div class="container rounded bg-danger text-white">	
-      					<h5>Low Danger Zone</h5>0%<input type="range" name="highDangerHum"
-         				min="0" max="19" onchange="updateTextInput(this.value);">19%
+      					<h5>Low Danger Zone</h5>0%<input id="airHumLowDanger" type="range" min="0" max="19" value="{{ values['airHumLowDanger']}}" oninput="airHumLowDangerOutput.value = airHumLowDanger.value">19%
+      					<p><output id="airHumLowDangerOutput">{{ values['airHumLowDanger']}}</output>%</p>
     				</div>
     			</div>	
     			<div class="col-md-4 text-center">
     				<div class="container rounded bg-danger text-white">
-						<h5>Low Danger Zone</h5>0%<input type="range" name="highDangerMoist"
-		         		min="0" max="19" onchange="updateTextInput(this.value);">19%
-		    			</div>
+						<h5>Low Danger Zone</h5>0%<input id="soilMoistLowDanger" type="range" min="0" max="19" value="{{ values['soilMoistLowDanger']}}" oninput="soilMoistLowDangerOutput.value = soilMoistLowDanger.value">19%
+						<p><output id="soilMoistLowDangerOutput">{{ values['soilMoistLowDanger']}}</output>%</p>
+		    		</div>
 		    	</div>
 			</div>
-			<input style="width: 100%;border-radius: 1rem;
+			<a href="#"><input style="width: 100%;border-radius: 1rem;
     padding: 1.5%;
     border: none;
     cursor: pointer;
     font-weight: 600;
     color: #fff;
-    background-color: #0062cc;" type="submit" class="btnSubmit" value="Update" />
+    background-color: #0062cc;" type="submit" class="btnSubmit" value="Update"/></a>
 		</div>
 	{% endblock %}
