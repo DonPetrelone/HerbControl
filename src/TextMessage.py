@@ -16,6 +16,8 @@ def text(str):
     client = Client(account_sid, auth_token)
 
     #message information
+    #these phone numbers are attached to the Twilio account
+    #do not try to change them here before modifying the account settings
     message = client.messages.create(
         to ="+12489312705",
         from_="+12055259682",

@@ -3,7 +3,6 @@ import os
 import time
 
 delay = 0.2
-
 spi = spidev.SpiDev()
 spi.open(0,0)
 

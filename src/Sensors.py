@@ -6,7 +6,9 @@
 #It also sends out text messages in case of any out of range measurements
 
 import AirTempHum
+import SoilMoisture
 import TextMessage
+import Database
 
 temp = 0
 hum = 0
@@ -20,6 +22,8 @@ airPort = 4
 #2 - call method to take soil moisture
     # If any values are out of range send client a text
     # call method to insert value in DB
+
+TextMessage.text("Hello")
 
 '''
 temp, hum = AirTempHum.airTempHum(airSensor, airPort)
