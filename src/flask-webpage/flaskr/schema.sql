@@ -24,3 +24,13 @@ CREATE TABLE ranges (
   soilMoistLowWarning INTEGER NOT NULL,
   soilMoistLowDanger INTEGER NOT NULL
 );
+
+CREATE TABLE values (
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
+  soilMoisture INTEGER,
+  airTemperature INTEGER,
+  airHumidity INTEGER
+);
+
+INSERT INTO user VALUES (1, 'herbs', 
+  'pbkdf2:sha256:150000$aKzKX7W5$0c3413e97ca81b2257bc61587a6a7a87f8ff95a35cd6c36acafc946a867d0142');
