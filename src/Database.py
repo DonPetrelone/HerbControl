@@ -41,7 +41,7 @@ def dbGetRanges():
     airTempHighWarning = int(''.join(map(str, c.fetchone())))
 
     c.execute('SELECT airTempGood FROM ranges')
-    airTempHighGood = int(''.join(map(str, c.fetchone())))
+    airTempGood = int(''.join(map(str, c.fetchone())))
 
     c.execute('SELECT airTempLowWarning FROM ranges')
     airTempLowWarning = int(''.join(map(str, c.fetchone())))
@@ -57,7 +57,7 @@ def dbGetRanges():
     airHumHighWarning = int(''.join(map(str, c.fetchone())))
 
     c.execute('SELECT airHumGood FROM ranges')
-    airHumHighGood = int(''.join(map(str, c.fetchone())))
+    airHumGood = int(''.join(map(str, c.fetchone())))
 
     c.execute('SELECT airHumLowWarning FROM ranges')
     airHumLowWarning = int(''.join(map(str, c.fetchone())))
@@ -65,8 +65,25 @@ def dbGetRanges():
     c.execute('SELECT airHumLowDanger FROM ranges')
     airHumLowDanger = int(''.join(map(str, c.fetchone())))
 
+    # query the values from the soil moisture ranges
+    c.execute('SELECT soilMoistHighDanger FROM ranges')
+    soilMoistHighDanger = int(''.join(map(str, c.fetchone())))
+
+    c.execute('SELECT soilMoistHighWarning FROM ranges')
+    soilMoistHighWarning = int(''.join(map(str, c.fetchone())))
+
+    c.execute('SELECT soilMoistGood FROM ranges')
+    soilMoistGood = int(''.join(map(str, c.fetchone())))
+
+    c.execute('SELECT soilMoistLowWarning FROM ranges')
+    soilMoistLowWarning = int(''.join(map(str, c.fetchone())))
+
+    c.execute('SELECT soilMoistLowDanger FROM ranges')
+    soilMoistLowDanger = int(''.join(map(str, c.fetchone())))
+
     #close the connection with the db
     conn.close()
 
-    return airTempHighDanger, airTempHighWarning, airTempHighGood, airTempLowWarning, airTempLowDanger, airHumHighDanger, \
-           airHumHighWarning, airHumHighGood, airHumLowWarning, airHumLowDanger
+    return airTempHighDanger, airTempHighWarning, airTempGood, airTempLowWarning, airTempLowDanger, airHumHighDanger, \
+           airHumHighWarning, airHumGood, airHumLowWarning, airHumLowDanger, soilMoistHighDanger, soilMoistHighWarning, \
+           soilMoistGood, soilMoistLowWarning, soilMoistLowDanger

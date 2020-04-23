@@ -10,27 +10,62 @@ import SoilMoisture
 import TextMessage
 import Database
 
+#measured values
 temp = 0
 hum = 0
+soil = 0
+
+#this variable determines the type of sensor. Change to 11 if you're using it.
 airSensor = 22
+
+#Port in the raspberry pi
 airPort = 4
 
-#1 - call method to take air temp and humidity
-    #If any values are out of range send client a text
-    #call method to insert value in DB
+#Channel of the microchip the soil sensor is connect to.
+#Change it if you change where it is connected.
+#soilChannel = 0
 
-#2 - call method to take soil moisture
-    # If any values are out of range send client a text
-    # call method to insert value in DB
-
-TextMessage.text("Hello")
-
-'''
+#get temperature and humidity from temp, humidity sensors
 temp, hum = AirTempHum.airTempHum(airSensor, airPort)
 
-if hum is not None and temp is not None:
-    TextMessage.text("Hello")    
-    print('Temp={0:0.1f}*  Humidity={1:0.1f}%'.format(temp, hum))
+#get soil moisture from sensor - not being taken right now
+#SoilMoisture.getSoil(soilChannel)
+
+#store values in the DB
+Database.dbInsert(temp,hum,soil)
+
+#getting ranges from DB, checking ranges and warning user via text message.
+airTempHighDanger, airTempHighWarning, airTempGood, airTempLowWarning, airTempLowDanger, airHumHighDanger, \
+airHumHighWarning, airHumGood, airHumLowWarning, airHumLowDanger, soilMoistHighDanger, soilMoistHighWarning, \
+soilMoistGood, soilMoistLowWarning, soilMoistLowDanger = Database.dbGetRanges()
+
+if hum is not None and temp is not None and soil is not None:
+    if temp >= airTempHighDanger:
+        TextMessage.text("Danger - Air Temperature High")
+    elif airTempHighWarning <= temp < airTempHighDanger:
+        TextMessage.text("Warning - Air Temperature High")
+    elif airTempLowDanger < temp <= airTempLowWarning:
+        TextMessage.text("Warning - Air Temperature Low")
+    elif temp <= airTempLowDanger:
+        TextMessage.text("Danger - Air Temperature Low")
+
+    if hum >= airHumHighDanger:
+        TextMessage.text("Danger - Air Humidity High")
+    elif airHumHighWarning <= hum < airHumHighDanger:
+        TextMessage.text("Warning - Air Humidity High")
+    elif airHumLowDanger < hum <= airHumLowWarning:
+        TextMessage.text("Warning - Air Humidity Low")
+    elif hum <= airHumLowDanger:
+        TextMessage.text("Danger - Air Humidity Low")
+
+    if soil >= soilMoistHighDanger:
+        TextMessage.text("Danger - Soil Moisture High")
+    elif soilMoistHighWarning <= soil < soilMoistHighDanger:
+        TextMessage.text("Warning - Soil Moisture High")
+    elif soilMoistLowDanger < soil <= soilMoistLowWarning:
+        TextMessage.text("Warning - Soil Moisture Low")
+    elif soil <= soilMoistLowDanger:
+        TextMessage.text("Danger - Soil Moisture Low")
 else:
-    print('Failed to get reading. Try again!')
-'''
+    #in case any measurements were not taken - warn user
+    TextMessage.text("Measurements no taken")
