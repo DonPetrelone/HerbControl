@@ -1,8 +1,8 @@
-#Herb Control - Senior Design Project
-#Western Michigan University
-#Authors: Vinicius Petrelli Cicerone, Dylan Lafleur, Paxton Plum
-#Faculty Advisor: Dr. John Kapenga
-#This method switches the voltage output of a desired pin.
+# CS 4910 - Herb Control Project
+# Western Michigan University
+# Authors: Vinicius Petrelli Cicerone, Dylan Lafleur, Paxton Plum
+# Faculty Advisor: Dr. John Kapenga
+# this method switches the voltage output of a desired pin.
 
 import wiringpi
 import time
