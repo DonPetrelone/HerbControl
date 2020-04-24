@@ -1,3 +1,8 @@
+# CS 4910 - Herb Control Project
+# Western Michigan University
+# Authors: Vinicius Petrelli Cicerone, Dylan Lafleur, Paxton Plum
+# Faculty Advisor: Dr. John Kapenga
+
 import spidev
 import os
 import time
