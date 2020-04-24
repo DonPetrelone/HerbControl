@@ -1,8 +1,8 @@
-#Herb Control - Senior Design Project
-#Western Michigan University
-#Authors: Vinicius Petrelli Cicerone, Dylan Lafleur, Paxton Plum
-#Faculty Advisor: Dr. John Kapenga
-#This file defines the function for sending text messages using Twilio account and Raspberry Pi
+# CS 4910 - Herb Control Project
+# Western Michigan University
+# Authors: Vinicius Petrelli Cicerone, Dylan Lafleur, Paxton Plum
+# Faculty Advisor: Dr. John Kapenga
+# this file defines the function for sending text messages using Twilio account and Raspberry Pi
 
 from twilio.rest import Client
 
