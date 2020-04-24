@@ -11,7 +11,7 @@ import TextMessage
 import Database
 
 #watchdog variable
-watchdog = 0
+watchdog = 1
 
 #measured values
 temp = 0
@@ -71,7 +71,6 @@ if hum is not None and temp is not None and soil is not None:
         TextMessage.text("Danger - Soil Moisture Low")
 else:
     #in case any measurements were not taken - warn user
-    watchdog = 1
     TextMessage.text("Measurements no taken")
 
 #fucntion to get the watchdog variable
