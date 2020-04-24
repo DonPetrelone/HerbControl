@@ -1,8 +1,8 @@
-#Herb Control - Senior Design Project
-#Western Michigan University
-#Authors: Vinicius Petrelli Cicerone, Dylan Lafleur, Paxton Plum
-#Faculty Advisor: Dr. John Kapenga
-#This function measures air temperature and humidity thorugh the AdafruitDHT 22 sensor
+# CS 4910 - Herb Control Project
+# Western Michigan University
+# Authors: Vinicius Petrelli Cicerone, Dylan Lafleur, Paxton Plum
+# Faculty Advisor: Dr. John Kapenga
+# this function measures air temperature and humidity thorugh the AdafruitDHT 22 sensor
 
 import sys
 import Adafruit_DHT
