@@ -9,7 +9,11 @@ with io.open("README.md", "rt", encoding="utf8") as f:
 setup(
     name="flaskr",
     version="1.0.0",
+    url="http://flask.pocoo.org/docs/tutorial/",
     license="BSD",
+    maintainer="Herb Control",
+    maintainer_email="no email",
+    description="The basic blog app built in the Flask tutorial.",
     long_description=readme,
     packages=find_packages(),
     include_package_data=True,
