@@ -19,3 +19,5 @@ def run_tests():
 	# add watchdog unit test calls here
 
 	return
+
+run_tests()
