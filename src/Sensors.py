@@ -1,9 +1,9 @@
-#Herb Control - Senior Design Project
-#Western Michigan University
-#Authors: Vinicius Petrelli Cicerone, Dylan Lafleur, Paxton Plum
-#Faculty Advisor: Dr. John Kapenga
-#This files takes measurements from the sensors and stores them in DB;
-#It also sends out text messages in case of any out of range measurements
+# CS 4910 - Herb Control Project
+# Western Michigan University
+# Authors: Vinicius Petrelli Cicerone, Dylan Lafleur, Paxton Plum
+# Faculty Advisor: Dr. John Kapenga
+# this files takes measurements from the sensors and stores them in DB;
+# it also sends out text messages in case of any out of range measurements
 
 import AirTempHum
 import SoilMoisture
@@ -72,7 +72,7 @@ if hum is not None and temp is not None and soil is not None:
 else:
     #in case any measurements were not taken - warn user
     watchdog = 1
-    TextMessage.text("Measurements no taken")
+    TextMessage.text("Measurements not taken")
 
 #fucntion to get the watchdog variable
 def getWatchdog():
