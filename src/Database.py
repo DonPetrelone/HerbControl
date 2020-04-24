@@ -1,10 +1,11 @@
-#Herb Control - Senior Design Project
-#Western Michigan University
-#Authors: Vinicius Petrelli Cicerone, Dylan Lafleur, Paxton Plum
-#Faculty Advisor: Dr. John Kapenga
-#This file contains a method that connects to the database, performs an insert query than disconnects.
+# CS 4910 - Herb Control Project
+# Western Michigan University
+# Authors: Vinicius Petrelli Cicerone, Dylan Lafleur, Paxton Plum
+# Faculty Advisor: Dr. John Kapenga
+# this file contains a method that connects to the database, performs an insert query than disconnects.
 
 import sqlite3
+import datetime
 
 def dbInsert(airTemp, airHum, soil):
 
@@ -15,7 +16,7 @@ def dbInsert(airTemp, airHum, soil):
     c = conn.cursor()
 
     #Execute the insert query with the parameters
-    c.execute('INSERT INTO values (soilMoisture, airTemperature, airHumidity)', soil, airTemp, airHum)
+    c.execute('INSERT INTO values (soilMoisture, airTemperature, airHumidity, date)', soil, airTemp, airHum, datetime.datetime.now())
 
     #commit changes
     conn.commit()
