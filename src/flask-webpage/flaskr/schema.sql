@@ -29,7 +29,8 @@ CREATE TABLE values (
   id INTEGER PRIMARY KEY AUTOINCREMENT,
   soilMoisture INTEGER,
   airTemperature INTEGER,
-  airHumidity INTEGER
+  airHumidity INTEGER,
+  date TEXT
 );
 
 INSERT INTO user VALUES (1, 'herbs', 
