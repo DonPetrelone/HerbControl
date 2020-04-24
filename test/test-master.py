@@ -2,7 +2,7 @@
 # Western Michigan University
 # Authors: Vinicius Petrelli Cicerone, Dylan Lafleur, Paxton Plum
 # Faculty Advisor: Dr. John Kapenga
-# Runs all controller unit tests
+# runs all controller unit tests
 
 import test_textMessage
 import test_database
