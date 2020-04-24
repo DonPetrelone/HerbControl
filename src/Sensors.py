@@ -10,6 +10,9 @@ import SoilMoisture
 import TextMessage
 import Database
 
+#watchdog variable
+watchdog = 0
+
 #measured values
 temp = 0
 hum = 0
@@ -23,13 +26,13 @@ airPort = 4
 
 #Channel of the microchip the soil sensor is connect to.
 #Change it if you change where it is connected.
-#soilChannel = 0
+soilChannel = 0
 
 #get temperature and humidity from temp, humidity sensors
 temp, hum = AirTempHum.airTempHum(airSensor, airPort)
 
 #get soil moisture from sensor - not being taken right now
-#SoilMoisture.getSoil(soilChannel)
+SoilMoisture.getSoil(soilChannel)
 
 #store values in the DB
 Database.dbInsert(temp,hum,soil)
@@ -68,4 +71,9 @@ if hum is not None and temp is not None and soil is not None:
         TextMessage.text("Danger - Soil Moisture Low")
 else:
     #in case any measurements were not taken - warn user
+    watchdog = 1
     TextMessage.text("Measurements no taken")
+
+#fucntion to get the watchdog variable
+def getWatchdog():
+    return watchdog
