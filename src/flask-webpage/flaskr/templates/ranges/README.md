@@ -1,0 +1,2 @@
+# Herb Control - Ranges
+This directory contains the html file index which makes up the main page of this application. The index.html has its blueprint in the ranges.py file. These two components along with the base.html file make up th entire main page

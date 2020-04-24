@@ -1,0 +1,2 @@
+# Herb Control - Auth
+This directory contains the authentication template that represents the login componnets in the login.html file. This template along with the auth,py blueprint make up all of the authentication and login functionality.

@@ -1,0 +1,2 @@
+# Herb Control - Tests
+This direcotry contains the main tests performed on the webpage. Database functionality, authentication, session creation are all things that were tested in the files in this directory. They were create using the Pytest framework and can be easily run using the pytest command. For more information on unit tests please visit the pytest documentation page at: https://docs.pytest.org/en/latest/getting-started.html and also the Flask tutorial page on Pytest: https://flask.palletsprojects.com/en/1.1.x/tutorial/tests/
