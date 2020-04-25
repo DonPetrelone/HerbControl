@@ -25,12 +25,12 @@ CREATE TABLE ranges (
   soilMoistLowDanger INTEGER NOT NULL
 );
 
-CREATE TABLE values (
+CREATE TABLE measurements (
   id INTEGER PRIMARY KEY AUTOINCREMENT,
   soilMoisture INTEGER,
   airTemperature INTEGER,
   airHumidity INTEGER,
-  date TEXT
+  dateString TEXT
 );
 
 INSERT INTO user VALUES (1, 'herbs', 

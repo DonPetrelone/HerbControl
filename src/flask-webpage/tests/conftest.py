@@ -2,7 +2,8 @@ import os
 import tempfile
 
 import pytest
-
+import sys
+sys.path.append("..")
 from flaskr.db import get_db, init_db
 from flaskr import create_app
 

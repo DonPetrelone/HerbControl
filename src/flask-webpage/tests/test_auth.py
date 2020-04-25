@@ -1,4 +1,6 @@
 import pytest
+import sys
+sys.path.append("..")
 from flask import g, session
 from flaskr.db import get_db
 
@@ -9,7 +11,7 @@ def test_login(client, auth):
 
 	with client:
 		client.get('/')
-		assert session['user_id'] == 1
+		assert session['user_id'] == 2
 		assert g.user['username'] == 'test'
 
 
