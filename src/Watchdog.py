@@ -12,9 +12,12 @@ voltagePin = 7
 inOut = 1
 onOff = 0 #shuts everything off
 
-#check if the watchdog is zero
-if Sensors.getWatchdog() == 0:
+#check if the watchdog is zero - case which the sensors file was not run
+if Sensors.watchdog == 0:
     #send warning text message to user
     TextMessage.text("Watchdog Set - Shutting Relay Switch Off.")
     # shut everything off by calling the voltage control function
     VoltageControl.pinVoltage(voltagePin, inOut, onOff)
+else:
+    #change watchdog variable back to 0
+    Sensors.watchdog = 0
