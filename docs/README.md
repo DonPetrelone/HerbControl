@@ -4,13 +4,6 @@ The HerbController is a raspberry pi based system that alerts growers to the gro
 
 The HerbController is developped by a group of Western Michigan University undergraduates. It is under the GPL 2.0 open-source licence to encourage distribution and further development upon the system by others.
 
-## Features
-
-
-
-## Getting Started
-
-
 
 ## Mailing Lists
 
