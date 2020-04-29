@@ -4,7 +4,8 @@ This repository holds the Senior Project of the Herb Control group in Western Mi
 
 # About The Project
 
-The goal of this project was to develop a system for growing herbs, which has automated components. The system was designed to control lighting, measure soil moisture, air temperature and humidity, as well as provide access to this data and control of the components through a webpage. The herbs utilized were basil, parsley, mint and chives.
+The goal of this project was to develop a system for growing herbs, which has automated components. The system was designed to control lighting, measure soil moisture, air temperature and humidity, as well as provide access to this data and control of the components through a webpage. The herbs utilized were basil, parsley, mint and chives. The number of plants that can be sprouted and their long life lead to lower overall growing cosots as seen here:
+https://github.com/DonPetrelone/HerbControl/blob/master/docs/CostAnalysis.pdf
 
 # Adivsor
 
